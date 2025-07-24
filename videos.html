@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Marketing Videos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding-bottom: 40px;
+    }
+
+    .navbar {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #00f7ff;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1rem;
+      padding: 0.3rem 0.6rem;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .nav-links li a:hover {
+      background-color: rgba(0, 247, 255, 0.1);
+      color: #00f7ff;
+    }
+
+    .nav-links li a[href="videos.html"] {
+      background-color: #00f7ff;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin: 2rem 0 1.5rem;
+      color: #ffffff;
+    }
+
+    .video-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+
+    .video-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1rem;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+    }
+
+    .video-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px rgba(0, 247, 255, 0.3);
+    }
+
+    .video-card iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    .video-card h3 {
+      margin-top: 1rem;
+      font-size: 1rem;
+      text-align: center;
+      color: #00f7ff;
+    }
+
+    @media (max-width: 600px) {
+      .section-title {
+        font-size: 1.6rem;
+      }
+
+      .logo {
+        font-size: 1.4rem;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Digital Launchpad</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="videos-section">
+    <h1 class="section-title">Top Digital Marketing Videos</h1>
+
+    <div class="video-container">
+
+      <div class="video-card">
+  <iframe src="https://www.youtube.com/embed/xsVTqzratPs" allowfullscreen></iframe>
+  <h3>SEO For Beginners</h3>
+</div>
+
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/D7984H5JTys" allowfullscreen></iframe>
+        <h3>Complete Google Ads Tutorial</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/sbOuzNm31Y8" allowfullscreen></iframe>
+        <h3>Social Media Marketing Guide</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/94gHaHKmD4Q" allowfullscreen></iframe>
+        <h3>Email Marketing for Beginners</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/0R_3iarc8IA" allowfullscreen></iframe>
+        <h3>Content Marketing Strategy 2024</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/UuE37-MM1ws" allowfullscreen></iframe>
+        <h3>How to Use Google Analytics</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/_b7Mec2bogA" allowfullscreen></iframe>
+        <h3>GA4 Setup Tutorial 2024</h3>
+      </div>
+
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/kunkYTKFNtI" allowfullscreen></iframe>
+        <h3>Digital Marketing with AI (4‑Hour Course)</h3>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

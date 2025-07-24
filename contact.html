@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Marketing Quiz</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #00d9ff;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.6rem;
+      color: #00ffe1;
+      margin: 40px 0 30px;
+      text-shadow: 0 4px 10px rgba(0,255,255,0.2);
+    }
+
+    .quiz-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .question {
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .question h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #00ffe1;
+    }
+
+    label {
+      display: block;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    label:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .correct {
+      background-color: rgba(0, 255, 136, 0.2);
+      color: #00ff88;
+      font-weight: 600;
+    }
+
+    .wrong {
+      background-color: rgba(255, 0, 0, 0.2);
+      color: #ff6b6b;
+      font-weight: 600;
+    }
+
+    .btn {
+      background: linear-gradient(to right, #00d2ff, #3a7bd5);
+      color: white;
+      padding: 14px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      display: block;
+      margin: 30px auto 0;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(to right, #3a7bd5, #00d2ff);
+    }
+
+    .result {
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 25px auto 10px;
+      font-weight: 600;
+      color: #00ffe1;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Digital Launchpad</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="quiz.html" class="active">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>🎯 Digital Marketing Quiz</h1>
+
+  <div class="quiz-container" id="quiz-container"></div>
+
+  <button class="btn" onclick="submitQuiz()">Submit Quiz</button>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    const quizData = [
+      { question: "What does SEO stand for?", options: ["Search Engine Optimization", "Social Engagement Output", "Systematic Engine Order", "Search Email Outreach"], answer: 0 },
+      { question: "Which platform is commonly used for paid online ads?", options: ["Google Ads", "YouTube", "Facebook Groups", "WhatsApp"], answer: 0 },
+      { question: "Which is a key metric in email marketing?", options: ["Open rate", "Number of likes", "Retweets", "Bounce rate"], answer: 0 },
+      { question: "What is a keyword?", options: ["A secret password", "An important word people search for", "A login name", "A URL"], answer: 1 },
+      { question: "Which social platform is best for B2B marketing?", options: ["LinkedIn", "Instagram", "TikTok", "Snapchat"], answer: 0 },
+      { question: "Which tool is used for website analytics?", options: ["Google Analytics", "Google Maps", "Google Trends", "Gmail"], answer: 0 },
+      { question: "Which is not a content format?", options: ["Blog post", "Infographic", "Podcast", "Spreadsheet"], answer: 3 },
+      { question: "PPC stands for?", options: ["Pay Per Click", "Post Per Campaign", "Product Page Count", "None"], answer: 0 },
+      { question: "Which of the following is a call-to-action?", options: ["Buy Now", "Welcome", "Hello", "Thanks"], answer: 0 },
+      { question: "Which algorithm ranks websites in search?", options: ["PageRank", "YouTube Rank", "Facebook Boost", "LinkJump"], answer: 0 },
+      { question: "Which one is a keyword research tool?", options: ["Ubersuggest", "Photoshop", "Google Drive", "Figma"], answer: 0 },
+      { question: "What’s an impression in digital marketing?", options: ["A website view", "An email click", "A social media comment", "A phone call"], answer: 0 },
+      { question: "CRO stands for?", options: ["Conversion Rate Optimization", "Customer Rank Order", "Content Reach Output", "Click Return Option"], answer: 0 },
+      { question: "Which is used to schedule posts?", options: ["Buffer", "Excel", "Zoom", "VLC"], answer: 0 },
+      { question: "What is a landing page?", options: ["A special page designed for campaigns", "The homepage", "A search result", "A website footer"], answer: 0 },
+      { question: "What does CPM mean?", options: ["Cost Per Mille (thousand impressions)", "Click Per Mail", "Cash Page Metrics", "Conversion Per Minute"], answer: 0 },
+      { question: "Which is a visual search platform?", options: ["Pinterest", "Reddit", "Medium", "Trello"], answer: 0 },
+      { question: "Email marketing tools include?", options: ["Mailchimp", "MS Paint", "WhatsApp", "Flickr"], answer: 0 },
+      { question: "Best format for lead generation?", options: ["Landing Page + Form", "Image Gallery", "FAQ Page", "About Us Page"], answer: 0 },
+      { question: "Bounce rate shows?", options: ["People leaving site without interaction", "Total conversions", "Email opens", "Product views"], answer: 0 }
+    ];
+
+    const quizContainer = document.getElementById("quiz-container");
+
+    function loadQuiz() {
+      quizContainer.innerHTML = "";
+      quizData.forEach((q, index) => {
+        const questionDiv = document.createElement("div");
+        questionDiv.classList.add("question");
+        questionDiv.innerHTML = `<h3>Q${index + 1}. ${q.question}</h3>`;
+        q.options.forEach((option, i) => {
+          questionDiv.innerHTML += `
+            <label>
+              <input type="radio" name="q${index}" value="${i}" />
+              ${option}
+            </label>
+          `;
+        });
+        quizContainer.appendChild(questionDiv);
+      });
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      quizData.forEach((q, index) => {
+        const selected = document.querySelector(`input[name="q${index}"]:checked`);
+        const questionDiv = quizContainer.children[index];
+        const allOptions = questionDiv.querySelectorAll("label");
+
+        allOptions.forEach((label, i) => {
+          label.classList.remove("correct", "wrong");
+          if (i === q.answer) {
+            label.classList.add("correct");
+          }
+        });
+
+        if (selected) {
+          const selectedVal = parseInt(selected.value);
+          if (selectedVal === q.answer) {
+            score++;
+          } else {
+            allOptions[selectedVal].classList.add("wrong");
+          }
+        }
+      });
+
+      document.getElementById("result").innerText = `✅ You scored ${score} out of ${quizData.length}`;
+    }
+
+    loadQuiz();
+  </script>
+</body>
+</html>

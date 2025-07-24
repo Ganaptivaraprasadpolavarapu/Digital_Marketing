@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Marketing Tools</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+      padding-bottom: 50px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00f2ff;
+    }
+
+    .tools-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .tools-section h1 {
+      font-size: 2.8rem;
+      color: #00f2ff;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 8px rgba(0, 255, 255, 0.2);
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 35px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .tool-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px 20px;
+      border-radius: 16px;
+      transition: transform 0.4s ease, background 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(5px);
+      cursor: pointer;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 25px rgba(0, 255, 255, 0.15);
+    }
+
+    .tool-card img {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .tool-card:hover img {
+      transform: rotate(5deg) scale(1.1);
+    }
+
+    .tool-card h3 {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .tool-card p {
+      font-size: 0.95rem;
+      color: #dcdcdc;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .tools-section h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Digital Launchpad</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="tools-section">
+    <h1>🔥 Top Digital Marketing Tools</h1>
+    <div class="tools-grid">
+
+      <!-- Tool Cards -->
+      <div class="tool-card">
+        <img src="https://img.icons8.com/color/96/000000/google-analytics.png" />
+        <h3>Google Analytics</h3>
+        <p>Website traffic and behavior tracking.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/fluency/96/seo.png" />
+        <h3>SEMRush</h3>
+        <p>SEO & competitor analysis tool.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/color/96/000000/mailchimp.png" />
+        <h3>Mailchimp</h3>
+        <p>Email marketing automation tool.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/color/96/000000/canva.png" />
+        <h3>Canva</h3>
+        <p>Graphic design made easy.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/color/96/000000/facebook-ads.png" />
+        <h3>Meta Ads</h3>
+        <p>Facebook and Instagram advertising.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/color/96/000000/google-ads.png" />
+        <h3>Google Ads</h3>
+        <p>PPC and display ad campaigns.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/color/96/000000/hubspot.png" />
+        <h3>HubSpot</h3>
+        <p>CRM and inbound marketing platform.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/fluency/96/ahrefs.png" />
+        <h3>Ahrefs</h3>
+        <p>Backlink and keyword SEO tools.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/fluency/96/surfer-seo.png" />
+        <h3>Surfer SEO</h3>
+        <p>Content optimization for search engines.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/color/96/000000/buffer.png" />
+        <h3>Buffer</h3>
+        <p>Social media scheduling & publishing.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/fluency/96/wordpress.png" />
+        <h3>WordPress</h3>
+        <p>CMS for content publishing.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/fluency/96/adobe-photoshop.png" />
+        <h3>Photoshop</h3>
+        <p>Professional image editing software.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/fluency/96/notion.png" />
+        <h3>Notion</h3>
+        <p>Planning, content writing & collaboration.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/color/96/000000/zapier.png" />
+        <h3>Zapier</h3>
+        <p>Automation between marketing tools.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/fluency/96/shopify.png" />
+        <h3>Shopify</h3>
+        <p>Build and manage e-commerce stores.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/fluency/96/screaming-frog.png" />
+        <h3>Screaming Frog</h3>
+        <p>SEO technical site crawler.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/fluency/96/slack.png" />
+        <h3>Slack</h3>
+        <p>Team communication and collaboration.</p>
+      </div>
+
+      <div class="tool-card">
+        <img src="https://img.icons8.com/fluency/96/fiverr.png" />
+        <h3>Fiverr</h3>
+        <p>Hire freelancers for marketing tasks.</p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
