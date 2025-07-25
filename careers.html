@@ -19,34 +19,43 @@
     }
 
     .navbar {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 20px 60px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     .logo {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: #00f7ff;
+      font-size: 26px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 1px;
     }
 
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 1.5rem;
+      gap: 30px;
     }
 
     .nav-links li a {
-      text-decoration: none;
       color: #ffffff;
-      font-size: 1rem;
-      padding: 0.3rem 0.6rem;
-      transition: all 0.3s ease;
-      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+
+    .nav-links li a:hover {
+      background: #00d2ff;
+      color: #000;
     }
 
     .nav-links li a:hover {
