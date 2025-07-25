@@ -22,21 +22,23 @@
     }
 
     .navbar {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 20px 50px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 60px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
       position: sticky;
       top: 0;
-      backdrop-filter: blur(10px);
-      z-index: 1000;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     .logo {
-      font-size: 24px;
-      font-weight: 600;
+      font-size: 26px;
+      font-weight: 700;
       color: #ffffff;
+      letter-spacing: 1px;
     }
 
     .nav-links {
@@ -45,15 +47,26 @@
       gap: 30px;
     }
 
-    .nav-links a {
-      text-decoration: none;
+    .nav-links li a {
       color: #ffffff;
+      text-decoration: none;
       font-weight: 500;
-      transition: color 0.3s ease;
+      transition: 0.3s;
+      padding: 6px 12px;
+      border-radius: 8px;
     }
 
+    .nav-links li a:hover {
+      background: #00d2ff;
+      color: #000;
+    }
     .nav-links a:hover {
       color: #00d9ff;
+    }
+    .nav-links li a[href="roadmap.html"] {
+      background-color: #00f7ff;
+      color: #000;
+      font-weight: bold;
     }
 
     .main-container {
